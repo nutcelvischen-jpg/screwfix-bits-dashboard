@@ -292,6 +292,7 @@ body::before{
         <th>Rating</th>
         <th>Reviews</th>
         <th>CP Value</th>
+        <th>Link</th>
       </tr>
     </thead>
     <tbody id="cp-tbody"></tbody>
@@ -345,26 +346,26 @@ const DATA = {
   price_dist: {"£0-5":238,"£5-10":187,"£10-20":232,"£20-30":147,"£30-50":122,"£50-100":67,"£100-300":26},
   rating_dist: {"0-2":9,"2-3":25,"3-4":107,"4-4.5":197,"4.5-5":529},
   top_cp: [
-    {name:"Erbauer 1/4\" Rounding-Over Bit 31.8mm",brand:"Erbauer",price:0.05,rating:4.7,cp:94.0,reviews:18},
-    {name:"Erbauer 1/4\" Straight Router Cutter 10mm",brand:"Erbauer",price:0.05,rating:4.5,cp:90.0,reviews:58},
-    {name:"Bosch HSS-R DIN338 Drill Bit 6.0x57mm",brand:"Bosch",price:0.10,rating:4.0,cp:40.0,reviews:54},
-    {name:"Bosch PointTeq Metal Drill Bit 4.5mm",brand:"Bosch",price:0.50,rating:4.3,cp:8.6,reviews:11},
-    {name:"Bosch PointTeq Metal Drill Bit 5mm",brand:"Bosch",price:0.50,rating:4.2,cp:8.4,reviews:25},
-    {name:"Erbauer Hex Shank Mixed Diamond Impact",brand:"Erbauer",price:1.00,rating:3.7,cp:3.7,reviews:11},
-    {name:"Erbauer Masonry Drill Bit 6mm",brand:"Erbauer",price:1.59,rating:4.8,cp:3.02,reviews:16},
-    {name:"Erbauer Flat Wood Drill Bit 12mm",brand:"Erbauer",price:1.69,rating:5.0,cp:2.96,reviews:10},
-    {name:"Erbauer Masonry Drill Bit 4mm",brand:"Erbauer",price:1.79,rating:4.8,cp:2.68,reviews:10},
-    {name:"Erbauer Flat Wood Drill Bit 14mm",brand:"Erbauer",price:1.79,rating:4.6,cp:2.57,reviews:10},
-    {name:"Erbauer Flat Wood Drill Bit 16mm",brand:"Erbauer",price:1.99,rating:4.8,cp:2.41,reviews:14},
-    {name:"Erbauer Brad Point Wood Drill Bit",brand:"Erbauer",price:1.79,rating:4.3,cp:2.40,reviews:31},
-    {name:"Erbauer Hex Magnetic Bit Holder 57mm",brand:"Erbauer",price:1.97,rating:4.6,cp:2.34,reviews:158},
-    {name:"Erbauer Brad Point Wood Drill Bit 6mm",brand:"Erbauer",price:1.89,rating:4.4,cp:2.33,reviews:17},
-    {name:"Erbauer Masonry Drill Bit 7mm",brand:"Erbauer",price:2.19,rating:4.9,cp:2.24,reviews:14},
-    {name:"Erbauer Masonry Drill Bit 8mm",brand:"Erbauer",price:2.19,rating:4.8,cp:2.19,reviews:11},
-    {name:"Erbauer Brad Point Wood Drill Bit 8mm",brand:"Erbauer",price:1.99,rating:4.2,cp:2.11,reviews:10},
-    {name:"Erbauer Masonry Drill Bit 10mm",brand:"Erbauer",price:2.29,rating:4.7,cp:2.05,reviews:21},
-    {name:"Erbauer Flat Wood Drill Bit 18mm",brand:"Erbauer",price:2.49,rating:5.0,cp:2.01,reviews:21},
-    {name:"Bosch Brad Point Wood Drill Bit",brand:"Bosch",price:2.49,rating:4.9,cp:1.97,reviews:19}
+    {name:"Erbauer 1/4\" Rounding-Over Bit 31.8mm",brand:"Erbauer",price:0.05,rating:4.7,cp:94.0,reviews:18,sku:"33100",url:"https://www.screwfix.com/p/erbauer-1-4-rounding-over-bit-31-8mm-x-17-5mm/33100"},
+    {name:"Erbauer 1/4\" Straight Router Cutter 10mm",brand:"Erbauer",price:0.05,rating:4.5,cp:90.0,reviews:58,sku:"58728",url:"https://www.screwfix.com/p/erbauer-1-4-straight-router-cutter-10mm-x-25-4mm/58728"},
+    {name:"Bosch HSS-R DIN338 Drill Bit 6.0x57mm",brand:"Bosch",price:0.10,rating:4.0,cp:40.0,reviews:54,sku:"45042",url:"https://www.screwfix.com/p/bosch-hss-r-din338-drill-bit-6-0-x-57-x-93mm/45042"},
+    {name:"Bosch PointTeq Metal Drill Bit 4.5mm",brand:"Bosch",price:0.50,rating:4.3,cp:8.6,reviews:11,sku:"653FV",url:"https://www.screwfix.com/p/bosch-pointteq-straight-shank-metal-drill-bit-4-5mm-x-80mm/653fv"},
+    {name:"Bosch PointTeq Metal Drill Bit 5mm",brand:"Bosch",price:0.50,rating:4.2,cp:8.4,reviews:25,sku:"149FV",url:"https://www.screwfix.com/p/bosch-pointteq-straight-shank-metal-drill-bit-5mm-x-86mm/149fv"},
+    {name:"Erbauer Hex Shank Mixed Diamond Impact",brand:"Erbauer",price:1.00,rating:3.7,cp:3.7,reviews:11,sku:"7581V",url:"https://www.screwfix.com/p/erbauer-1-4-hex-shank-mixed-diamond-impact-screwdriver-bits-3-pieces/7581v"},
+    {name:"Erbauer Masonry Drill Bit 6mm",brand:"Erbauer",price:1.59,rating:4.8,cp:3.02,reviews:16,sku:"373PH",url:"https://www.screwfix.com/p/erbauer-straight-shank-masonry-drill-bit-6mm-x-100mm/373ph"},
+    {name:"Erbauer Flat Wood Drill Bit 12mm",brand:"Erbauer",price:1.69,rating:5.0,cp:2.96,reviews:10,sku:"477PH",url:"https://www.screwfix.com/p/erbauer-hex-shank-flat-wood-drill-bit-12mm-x-152mm/477ph"},
+    {name:"Erbauer Masonry Drill Bit 4mm",brand:"Erbauer",price:1.79,rating:4.8,cp:2.68,reviews:10,sku:"421PH",url:"https://www.screwfix.com/p/erbauer-straight-shank-masonry-drill-bit-4mm-x-70mm/421ph"},
+    {name:"Erbauer Flat Wood Drill Bit 14mm",brand:"Erbauer",price:1.79,rating:4.6,cp:2.57,reviews:10,sku:"117PH",url:"https://www.screwfix.com/p/erbauer-hex-shank-flat-wood-drill-bit-14mm-x-152mm/117ph"},
+    {name:"Erbauer Flat Wood Drill Bit 16mm",brand:"Erbauer",price:1.99,rating:4.8,cp:2.41,reviews:14,sku:"482PH",url:"https://www.screwfix.com/p/erbauer-hex-shank-flat-wood-drill-bit-16mm-x-152mm/482ph"},
+    {name:"Erbauer Brad Point Wood Drill Bit",brand:"Erbauer",price:1.79,rating:4.3,cp:2.40,reviews:31,sku:"393PH",url:"https://www.screwfix.com/p/erbauer-straight-shank-brad-point-wood-drill-bits-3mm-x-61mm-2-pack/393ph"},
+    {name:"Erbauer Hex Magnetic Bit Holder 57mm",brand:"Erbauer",price:1.97,rating:4.6,cp:2.34,reviews:158,sku:"11144",url:"https://www.screwfix.com/p/erbauer-1-4-hex-magnetic-bit-holder-57mm/11144"},
+    {name:"Erbauer Brad Point Wood Drill Bit 6mm",brand:"Erbauer",price:1.89,rating:4.4,cp:2.33,reviews:17,sku:"922PH",url:"https://www.screwfix.com/p/erbauer-straight-shank-brad-point-wood-drill-bits-4mm-x-75mm-2-pack/922ph"},
+    {name:"Erbauer Masonry Drill Bit 7mm",brand:"Erbauer",price:2.19,rating:4.9,cp:2.24,reviews:14,sku:"886PH",url:"https://www.screwfix.com/p/erbauer-straight-shank-masonry-drill-bit-7mm-x-150mm/886ph"},
+    {name:"Erbauer Masonry Drill Bit 8mm",brand:"Erbauer",price:2.19,rating:4.8,cp:2.19,reviews:11,sku:"137PH",url:"https://www.screwfix.com/p/erbauer-straight-shank-masonry-drill-bit-8mm-x-150mm/137ph"},
+    {name:"Erbauer Brad Point Wood Drill Bit 8mm",brand:"Erbauer",price:1.99,rating:4.2,cp:2.11,reviews:10,sku:"338PH",url:"https://www.screwfix.com/p/erbauer-straight-shank-brad-point-wood-drill-bit-5mm-x-86mm/338ph"},
+    {name:"Erbauer Masonry Drill Bit 10mm",brand:"Erbauer",price:2.29,rating:4.7,cp:2.05,reviews:21,sku:"711PH",url:"https://www.screwfix.com/p/erbauer-straight-shank-masonry-drill-bit-10mm-x-150mm/711ph"},
+    {name:"Erbauer Flat Wood Drill Bit 18mm",brand:"Erbauer",price:2.49,rating:5.0,cp:2.01,reviews:21,sku:"732PH",url:"https://www.screwfix.com/p/erbauer-hex-shank-flat-wood-drill-bit-18mm-x-152mm/732ph"},
+    {name:"Bosch Brad Point Wood Drill Bit",brand:"Bosch",price:2.49,rating:4.9,cp:1.97,reviews:19,sku:"40599",url:"https://www.screwfix.com/p/bosch-straight-shank-double-flute-brad-point-wood-drill-bit-4mm-x-70mm/40599"}
   ],
   top_reviewed: [
     {name:"DEWALT Multi-Material Drill Bit Set 100Pcs",sku:"13266",price:26.99,rating:4.7,review_count:1052,brand:"DeWalt"},
@@ -477,15 +478,16 @@ DATA.top_cp.forEach((d,i)=>{
   tbody.innerHTML += `
   <tr>
     <td class="dim">${String(i+1).padStart(2,'0')}</td>
-    <td style="max-width:300px">${d.name.length>45?d.name.slice(0,42)+'...':d.name}</td>
+    <td style="max-width:260px">${d.name.length>35?d.name.slice(0,32)+'...':d.name}</td>
     <td><span class="brand-tag ${brandClass}">${d.brand.toUpperCase()}</span></td>
     <td class="mono amber">£${d.price.toFixed(2)}</td>
     <td class="mono">${d.rating.toFixed(1)}</td>
     <td class="dim mono">${d.reviews}</td>
-    <td style="min-width:140px">
+    <td style="min-width:120px">
       <div class="cp-bar"><div class="cp-bar-fill" style="width:${bar}%"></div></div>
       <span class="highlight mono">${d.cp.toFixed(2)}</span>
     </td>
+    <td><a href="${d.url}" target="_blank" rel="noopener" style="color:var(--cyan);text-decoration:none;font-size:0.7rem;letter-spacing:0.05em">[${d.sku}]</a></td>
   </tr>`;
 });
 

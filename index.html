@@ -197,6 +197,46 @@ body::before{
   font-family:var(--sans);font-size:0.82rem;
   line-height:1.55;color:var(--phosphor);
 }
+
+/* ===== BAOHUI SECTION (010) ===== */
+:root{--baohui:#1b8d84;}
+.bh-section{margin:0 32px 40px;border:2px solid var(--baohui);background:var(--bg);padding:24px;}
+.bh-head{
+  font-family:var(--mono);font-weight:900;font-size:1rem;
+  color:var(--baohui);letter-spacing:0.1em;text-transform:uppercase;
+  border-bottom:1px solid var(--baohui);padding-bottom:12px;margin-bottom:20px;
+}
+.bh-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;}
+.bh-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:24px;}
+.bh-card{border:1px solid var(--grid-line);background:var(--surface);padding:16px;}
+.bh-card-title{
+  font-family:var(--sans);font-weight:900;font-size:0.75rem;
+  letter-spacing:0.08em;text-transform:uppercase;color:var(--baohui);margin-bottom:8px;
+}
+.bh-card-body{font-family:var(--sans);font-size:0.82rem;line-height:1.55;color:var(--phosphor);}
+.bh-stat{text-align:center;padding:20px 12px;border:1px solid var(--grid-line);background:var(--surface);}
+.bh-stat-num{font-family:var(--mono);font-weight:900;font-size:2rem;color:var(--baohui);}
+.bh-stat-label{font-family:var(--sans);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--amber);margin-top:4px;}
+.bh-table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:0.75rem;color:var(--phosphor);}
+.bh-table th{
+  font-family:var(--sans);font-weight:900;font-size:0.65rem;
+  letter-spacing:0.1em;text-transform:uppercase;color:var(--baohui);
+  border-bottom:2px solid var(--baohui);padding:8px 6px;text-align:left;
+}
+.bh-table td{border-bottom:1px solid var(--grid-line);padding:6px;}
+.bh-table tr:hover td{background:var(--grid-line);}
+.bh-tag{
+  display:inline-block;font-family:var(--mono);font-size:0.65rem;
+  padding:2px 6px;margin:1px;border:1px solid var(--grid-line);color:var(--phosphor);
+}
+.bh-tag.strength{border-color:var(--baohui);color:var(--baohui);}
+.bh-tag.gap{border-color:var(--hazard);color:var(--hazard);}
+.bh-priority{display:inline-block;font-family:var(--sans);font-weight:900;font-size:0.65rem;
+  letter-spacing:0.08em;text-transform:uppercase;padding:2px 8px;margin-right:6px;}
+.bh-p0{background:var(--hazard);color:#fff;}
+.bh-p1{background:var(--amber);color:#000;}
+.bh-p2{background:var(--grid-line);color:var(--phosphor);}
+.bh-chart{height:420px;margin:16px 0;}
 .insight-body{
   font-family:var(--sans);font-size:0.85rem;
   line-height:1.6;color:var(--phosphor);
@@ -477,9 +517,117 @@ body::before{
   </div>
 </div>
 
+<!-- SECTION 10: BAOHUI COMPETITIVE ANALYSIS -->
+<div class="section-head">
+  <span class="section-num" style="color:var(--baohui)">010 ///</span>
+  <span class="section-title" style="color:var(--baohui)">BAOHUI vs Screwfix Market // 寶暉競爭定位</span>
+</div>
+
+<div class="bh-section">
+  <div class="bh-head">BAOHUI POWER BIT INC. — 33 Products / 6 Categories</div>
+
+  <!-- STAT CARDS -->
+  <div class="bh-grid-3" style="margin-bottom:24px">
+    <div class="bh-stat"><div class="bh-stat-num">33</div><div class="bh-stat-label">Total SKUs</div></div>
+    <div class="bh-stat"><div class="bh-stat-num">5</div><div class="bh-stat-label">Security Types</div></div>
+    <div class="bh-stat"><div class="bh-stat-num">4</div><div class="bh-stat-label">Steel Grades</div></div>
+  </div>
+
+  <!-- PRODUCT TABLE -->
+  <table class="bh-table">
+    <thead><tr><th>Category</th><th>Products</th><th>Head Types</th><th>Material</th><th>Assembly</th><th>Shank</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Screwdriver Bits</strong></td><td>20</td><td>PH, PZ, TX, Hex, Slotted, Robertson, Security x5</td><td>S2, A-2</td><td>3126C, 3126E, A14, D76, Grippers</td><td>1/4" (6.35mm)</td></tr>
+      <tr><td><strong>Bit Holder</strong></td><td>3</td><td>—</td><td>Stainless, CR-V 6150</td><td>3126E Power Bit</td><td>1/4"</td></tr>
+      <tr><td><strong>Nut Setter</strong></td><td>3</td><td>Hex SW, Wing Nut</td><td>CR-V 6150, CR-V 50BV30</td><td>3126E Power Bit</td><td>1/4"</td></tr>
+      <tr><td><strong>L-Key Wrench</strong></td><td>4</td><td>TX, Hex (DIN/ISO/ASME), TP Hex</td><td>CR-V 6145, 6150</td><td>Manual</td><td>L-shank</td></tr>
+      <tr><td><strong>Adapter</strong></td><td>1</td><td>Socket</td><td>CR-V 6150</td><td>3126E Power Bit</td><td>1/4"</td></tr>
+      <tr><td><strong>Drill</strong></td><td>2</td><td>HSS</td><td>CR-V 6150</td><td>3126E Power Bit</td><td>1/4"</td></tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top:32px"></div>
+
+  <!-- STRENGTH vs GAP -->
+  <div class="bh-head">STRENGTH vs GAP ANALYSIS</div>
+  <div class="bh-grid">
+    <div class="bh-card">
+      <div class="bh-card-title">✦ STRENGTHS</div>
+      <div class="bh-card-body">
+        <div style="margin-bottom:10px"><span class="bh-tag strength">Security Bits x5</span> Tamper-Proof TX, TP Hex, Snake Eye/Spanner, 3-Wing, 4-Wing, TRILOB — no competitor offers this breadth</div>
+        <div style="margin-bottom:10px"><span class="bh-tag strength">Full TX Coverage</span> Insert + Power + TP + Color Ring Double End, T8–T50</div>
+        <div style="margin-bottom:10px"><span class="bh-tag strength">Material Transparency</span> A-2 / S-2 / CR-V 6150 / CR-V 50BV30 clearly specified; 88% of Screwfix SKUs don't specify material</div>
+        <div style="margin-bottom:10px"><span class="bh-tag strength">Nut Setter Triple</span> Standard + Magnetic + Wing Nut — most brands offer 1–2 at most</div>
+        <div><span class="bh-tag strength">L-Key Standards</span> DIN-ISO + ASME + Tamper-Proof — triple standard coverage</div>
+      </div>
+    </div>
+    <div class="bh-card">
+      <div class="bh-card-title">✦ GAPS (vs Screwfix Market)</div>
+      <div class="bh-card-body">
+        <div style="margin-bottom:10px"><span class="bh-tag gap">No Masonry Drill</span> Screwfix: 191 SKUs (2nd largest category). Missing entirely.</div>
+        <div style="margin-bottom:10px"><span class="bh-tag gap">No Router Bit</span> Screwfix: 91 SKUs, avg £35.40. High-margin woodworking niche.</div>
+        <div style="margin-bottom:10px"><span class="bh-tag gap">No Impact-Rated Line</span> Impact-rated is a hot label on Screwfix. BAOHUI has CR-V 50BV30 but doesn't brand it "Impact Ready"</div>
+        <div style="margin-bottom:10px"><span class="bh-tag gap">No Multi-piece Sets</span> Screwfix: 219 set products avg £37.19. Highest margin segment. BAOHUI only sells individuals.</div>
+        <div><span class="bh-tag gap">No Brad Point / Flat Wood</span> 68 SKUs on Screwfix, zero overlap with BAOHUI.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:32px"></div>
+
+  <!-- PRICE BAND POSITIONING CHART -->
+  <div class="bh-head">BAOHUI vs SCREWFIX BRANDS — PRICE BAND POSITIONING</div>
+  <div id="chart-baohui-position" class="bh-chart"></div>
+
+  <!-- MATERIAL vs CATEGORY CHART -->
+  <div class="bh-head">BAOHUI MATERIAL STRATEGY — 4 STEEL GRADES</div>
+  <div id="chart-baohui-material" class="bh-chart"></div>
+
+  <div style="margin-top:32px"></div>
+
+  <!-- STRATEGIC RECOMMENDATIONS -->
+  <div class="bh-head">STRATEGIC RECOMMENDATIONS // 戰略建議</div>
+
+  <div style="margin-bottom:16px">
+    <span class="bh-priority bh-p0">P0</span>
+    <strong>Security Bits 打頭陣</strong> — 5 種 Security 頭型同時推出，Screwfix 市場上沒有一個品牌做到。定價 £5-15，遠離 Erbauer 紅海。</div>
+  <div style="margin-bottom:16px">
+    <span class="bh-priority bh-p0">P0</span>
+    <strong>材質鋼號全標示</strong> — A-2 / S-2 / CR-V 6150 / CR-V 50BV30 寫在每支產品上。Screwfix 88% 的 SKU 不標材質，標了就是差異化。</div>
+  <div style="margin-bottom:16px">
+    <span class="bh-priority bh-p0">P0</span>
+    <strong>英文包裝 + ISO/DIN 規格號放大</strong> — 歐美買家看 DIN 3126E / DIN 3126C / JIS D76。寶暉已經有這些規格，但是藏在屬性欄。</div>
+
+  <div style="margin-bottom:16px">
+    <span class="bh-priority bh-p1">P1</span>
+    <strong>Multi-piece Set（25/50/100 件組合包）</strong> — Screwfix 組合包均價 £37-42，毛利率最高。寶暉有全頭型覆蓋，做組合包比任何品牌都容易。</div>
+  <div style="margin-bottom:16px">
+    <span class="bh-priority bh-p1">P1</span>
+    <strong>TX 全長度覆蓋（25mm→150mm）</strong> — 5 個長度同時推出。很多品牌只做 25mm 和 50mm，寶暉做到 150mm 是差異。</div>
+  <div style="margin-bottom:16px">
+    <span class="bh-priority bh-p1">P1</span>
+    <strong>Bit Holder 三款定位</strong> — Magnetic / Quick Release / 100% Stainless，三種客群三種定價。</div>
+
+  <div style="margin-bottom:16px">
+    <span class="bh-priority bh-p2">P2</span>
+    <strong>進入 Masonry Drill</strong> — Screwfix 第二大品類（191 SKU），但需要新供應鏈。</div>
+  <div style="margin-bottom:16px">
+    <span class="bh-priority bh-p2">P2</span>
+    <strong>推 Impact-rated 產品線</strong> — 用 CR-V 50BV30 材質，品牌標註 Impact Ready。</div>
+  <div>
+    <span class="bh-priority bh-p2">P2</span>
+    <strong>DIN 3126E 位接頭系列強打</strong> — 寶暉已有規格，但沒有作為賣點宣傳。</div>
+
+  <div style="margin-top:24px;border-top:1px solid var(--baohui);padding-top:16px">
+    <div style="font-family:var(--mono);font-size:0.85rem;color:var(--baohui);font-weight:700">
+      ▸ BOTTOM LINE: 寶暉的優勢是「Security 規格覆蓋度」和「材質透明度」，弱勢是「無組合包」和「無 Masonry/Router 品類」。進入英國市場最佳切入點是 £5-15 的 Security Bits + Multi-piece Set，用材質鋼號差異化，不要跟 Erbauer 拼低價。
+    </div>
+  </div>
+</div>
+
 <!-- FOOTER -->
 <div class="footer">
-  <div><span class="hazard-text">&#9632;</span> SCREWFIX BITS TERMINAL // DATA SOURCE: screwfix.com // 1,019 RECORDS</div>
+  <div><span class="hazard-text">&#9632;</span> SCREWFIX BITS TERMINAL // DATA SOURCE: screwfix.com (1,019) + baohui-tools.com (33) // 1,052 RECORDS</div>
   <div>BUILT WITH TACTICAL TELEMETRY UI // <span id="timestamp"></span></div>
 </div>
 
@@ -588,7 +736,8 @@ const DATA = {
 const BRAND_COLORS = {
   Erbauer:'#E61919', Bosch:'#00CED1', DeWalt:'#FFC107',
   Wera:'#90EE90', Trend:'#DDA0DD', Other:'#666666',
-  Milwaukee:'#FF4444', Makita:'#00FF7F', Titan:'#FF8C00', Einhell:'#FF69B4'
+  Milwaukee:'#FF4444', Makita:'#00FF7F', Titan:'#FF8C00', Einhell:'#FF69B4',
+  BAOHUI:'#1b8d84'
 };
 
 // ===== PLOTLY THEME =====
@@ -870,6 +1019,55 @@ Plotly.newPlot('chart-review-dom',[{
   yaxis:{...LAYOUT.yaxis,tickfont:{size:9},autorange:'reversed'},
   margin:{...LAYOUT.margin,l:160},
   height:450
+},{displayModeBar:false,responsive:true});
+
+// ===== CHART 11: BAOHUI vs Screwfix Brand Positioning =====
+const bhBrands = ['Erbauer','Bosch','DeWalt','Wera','Trend','Milwaukee','Makita','Titan','BAOHUI'];
+const bhPriceBands = ['£0-5','£5-10','£10-20','£20-30','£30-50','£50-100','£100+'];
+const bhDistData = {
+  Erbauer:[98,60,71,32,13,2,0],
+  Bosch:[74,39,27,22,19,17,4],
+  DeWalt:[35,47,29,10,11,1,0],
+  Wera:[3,5,34,21,20,20,5],
+  Trend:[0,3,17,26,5,3,0],
+  Milwaukee:[9,6,8,8,6,4,9],
+  Makita:[1,10,7,3,3,4,1],
+  Titan:[11,6,7,1,2,0,0],
+  BAOHUI:[0,8,15,7,3,0,0]
+};
+const bhTraces = bhBrands.map(b => ({
+  name:b, type:'bar',
+  x:bhPriceBands,
+  y:bhDistData[b],
+  marker:{color:b==='BAOHUI'?'#1b8d84':(BRAND_COLORS[b]||'#666666'),
+    line:{color:'#333',width:1}},
+  text:bhDistData[b].map(v=>v>0?v:''),
+  textposition:'inside',textfont:{color:'#fff',size:8}
+}));
+Plotly.newPlot('chart-baohui-position',bhTraces,{
+  ...LAYOUT,barmode:'stack',
+  yaxis:{...LAYOUT.yaxis,title:{text:'SKU COUNT',font:{color:'#666',size:10}}},
+  xaxis:{...LAYOUT.xaxis,title:{text:'PRICE BAND (£)',font:{color:'#666',size:10}}},
+  legend:{font:{size:8},orientation:'h',y:-0.18},
+  margin:{...LAYOUT.margin,b:60}
+},{displayModeBar:false,responsive:true});
+
+// ===== CHART 12: BAOHUI Material Strategy =====
+const matCats = ['Screwdriver\nBits','Bit Holder','Nut Setter','L-Key\nWrench','Adapter','Drill'];
+const matTraces = [
+  {name:'A-2',type:'bar',x:matCats,y:[8,0,0,0,0,0],marker:{color:'#4a7c59'},textposition:'inside',textfont:{size:8,color:'#fff'}},
+  {name:'S-2',type:'bar',x:matCats,y:[13,0,0,0,0,0],marker:{color:'#2e86c1'},textposition:'inside',textfont:{size:8,color:'#fff'}},
+  {name:'CR-V 6150',type:'bar',x:matCats,y:[0,2,2,2,1,2],marker:{color:'#1b8d84'},textposition:'inside',textfont:{size:8,color:'#fff'}},
+  {name:'CR-V 6145',type:'bar',x:matCats,y:[0,0,0,2,0,0],marker:{color:'#7d3c98'},textposition:'inside',textfont:{size:8,color:'#fff'}},
+  {name:'CR-V 50BV30',type:'bar',x:matCats,y:[0,0,1,0,0,0],marker:{color:'#c0392b'},textposition:'inside',textfont:{size:8,color:'#fff'}},
+  {name:'Stainless',type:'bar',x:matCats,y:[0,1,0,0,0,0],marker:{color:'#bdc3c7'},textposition:'inside',textfont:{size:8,color:'#333'}}
+];
+Plotly.newPlot('chart-baohui-material',matTraces,{
+  ...LAYOUT,barmode:'stack',
+  yaxis:{...LAYOUT.yaxis,title:{text:'NUMBER OF PRODUCTS',font:{color:'#666',size:10}}},
+  xaxis:{...LAYOUT.xaxis,title:{text:'PRODUCT CATEGORY',font:{color:'#666',size:10}}},
+  legend:{font:{size:8},orientation:'h',y:-0.18},
+  margin:{...LAYOUT.margin,b:60}
 },{displayModeBar:false,responsive:true});
 
 // ===== TIMESTAMP =====

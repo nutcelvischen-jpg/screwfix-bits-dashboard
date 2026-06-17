@@ -166,6 +166,45 @@ body::before{
   background:var(--hazard);
 }
 
+/* ===== INSIGHT BOX (SECTION 09) ===== */
+.insight-box{
+  margin:0 32px 40px;
+  border:2px solid var(--hazard);
+  background:var(--bg);
+  padding:24px;
+}
+.insight-heading{
+  font-family:var(--sans);font-weight:900;
+  font-size:0.9rem;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--hazard);
+  margin-bottom:16px;
+}
+.insight-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:16px;
+}
+.insight-card{
+  border:1px solid var(--grid-line);
+  background:var(--surface);
+  padding:16px;
+}
+.insight-card-title{
+  font-family:var(--sans);font-weight:900;
+  font-size:0.75rem;letter-spacing:0.08em;
+  text-transform:uppercase;color:var(--amber);
+  margin-bottom:8px;
+}
+.insight-card-body{
+  font-family:var(--sans);font-size:0.82rem;
+  line-height:1.55;color:var(--phosphor);
+}
+.insight-body{
+  font-family:var(--sans);font-size:0.85rem;
+  line-height:1.6;color:var(--phosphor);
+}
+@media(max-width:768px){
+  .insight-grid{grid-template-columns:1fr}
+}
+
 /* ===== FLOATING CROSSHAIRS ===== */
 .crosshair{
   position:absolute;color:var(--grid-line);
@@ -320,6 +359,124 @@ body::before{
   </table>
 </div>
 
+<!-- SECTION 05: BRAND POSITIONING -->
+<div class="section-head">
+  <span class="section-num">005 ///</span>
+  <span class="section-title">Brand Positioning // SKU Count x Price Band x Rating</span>
+</div>
+<div class="chart-grid cols-2">
+  <div class="chart-cell">
+    <div class="chart-label">Price Band x Brand (SKU Count)</div>
+    <div id="chart-price-brand"></div>
+  </div>
+  <div class="chart-cell">
+    <div class="chart-label">Brand Focus (Top 3 Types per Brand)</div>
+    <div id="chart-brand-focus"></div>
+  </div>
+</div>
+
+<!-- SECTION 06: TYPE ANALYSIS -->
+<div class="section-head">
+  <span class="section-num">006 ///</span>
+  <span class="section-title">Bit Type x Shank x Format Matrix</span>
+</div>
+<div class="chart-grid cols-2">
+  <div class="chart-cell">
+    <div class="chart-label">Type Distribution (SKU + Avg Price + Avg Rating)</div>
+    <div id="chart-type-dist"></div>
+  </div>
+  <div class="chart-cell">
+    <div class="chart-label">Set vs Individual // Price Strategy</div>
+    <div id="chart-format-dist"></div>
+  </div>
+</div>
+
+<!-- SECTION 07: SWEET SPOT -->
+<div class="section-head">
+  <span class="section-num">007 ///</span>
+  <span class="section-title">Price Sweet Spot // GBP20-50 Territory</span>
+</div>
+<div class="chart-grid cols-1">
+  <div class="chart-cell">
+    <div class="chart-label">Who Dominates the GBP20-50 Sweet Spot?</div>
+    <div id="chart-sweetspot"></div>
+  </div>
+</div>
+
+<!-- SECTION 08: REVIEW DOMINANCE -->
+<div class="section-head">
+  <span class="section-num">008 ///</span>
+  <span class="section-title">Review Dominance // Voice of the Buyer</span>
+</div>
+<div class="chart-grid cols-1">
+  <div class="chart-cell">
+    <div class="chart-label">Top 10 Most Reviewed Products by Brand</div>
+    <div id="chart-review-dom"></div>
+  </div>
+</div>
+
+<!-- SECTION 09: MARKET INSIGHT -->
+<div class="section-head">
+  <span class="section-num" style="color:var(--hazard)">009 ///</span>
+  <span class="section-title" style="color:var(--hazard)">Market Intelligence // Screwfix Bits Analysis</span>
+</div>
+<div class="insight-box">
+  <div class="insight-heading">&#9632; BRAND LANDSCAPE</div>
+  <div class="insight-grid">
+    <div class="insight-card">
+      <div class="insight-card-title">Erbauer — Volume King</div>
+      <div class="insight-card-body">276 SKUs, avg GBP11.45. Screwfix's house brand floods the entry market. GBP0-5 band: 98 SKUs. No one competes on price here. But avg rating 4.56 — not cheap junk, genuinely good value. The Screwfix channel IS Erbauer's channel.</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-card-title">Bosch — Broad Portfolio</div>
+      <div class="insight-card-body">202 SKUs, avg GBP19.62. Covers every price band evenly. The only brand with real presence across GBP0-5 (74 SKUs) through GBP100+ (4 SKUs). Strategy: be everywhere. But avg rating 4.53 — solid, not exceptional.</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-card-title">DeWalt — Tradesman's Choice</div>
+      <div class="insight-card-body">133 SKUs, avg GBP12.57. Focus on masonry (55 SKUs) and mid-range sets. The 100-piece set (GBP26.99, 1,052 reviews) is the #1 reviewed product in the entire category. DeWalt owns "I need a reliable set for work" positioning.</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-card-title">Wera — Premium Screwdriver</div>
+      <div class="insight-card-body">108 SKUs, avg GBP39.78. Highest avg price among top 5. Owns the screwdriver bit niche: 43 bit sets + 19 bits + 29 other. The specialist's specialist. If you need screwdriver bits, Wera = "I care about quality enough to pay double."</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-card-title">Trend — Router Monopolist</div>
+      <div class="insight-card-body">70 SKUs, avg GBP34.99. 55 out of 70 are router bits. Zero presence under GBP5 — Trend doesn't do cheap. Avg rating 4.66 — highest among brands with 50+ SKUs. They own a niche and defend it with quality.</div>
+    </div>
+  </div>
+
+  <div style="margin-top:24px"></div>
+  <div class="insight-heading">&#9632; STRUCTURAL INSIGHTS</div>
+  <div class="insight-grid">
+    <div class="insight-card">
+      <div class="insight-card-title">The GBP0-5 Trap</div>
+      <div class="insight-card-body">238 products (23% of total) in the GBP0-5 band. Erbauer has 98, Bosch has 74. Margin is razor-thin. This is a volume game — only works if you're Screwfix (Erbauer) or a global OEM (Bosch). Any new entrant here is margin suicide.</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-card-title">The GBP20-50 Sweet Spot</div>
+      <div class="insight-card-body">269 products (Masonries, Router Bits, DeWalt sets). This is where the margin lives. Erbauer has 45 SKUs here, Bosch 42, Trend 42, Wera 41. But look at avg ratings: Bosch 4.81, Milwaukee 4.70, Trend 4.73 — the premium brands dominate quality. Erbauer at 4.40 is the weakest.</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-card-title">Individual Stills Rule</div>
+      <div class="insight-card-body">527 individual bits vs 492 sets. But sets avg GBP20-39 vs individual avg GBP16. ABP (avg basket price) is higher for sets. The play: individual bits for tradesmen replacing worn stock, sets for new buyers and gift market.</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-card-title">Material Gap = Opportunity</div>
+      <div class="insight-card-body">899 out of 1,019 products don't specify material (HSS, Cobalt, Carbide). Only Diamond (74), Titanium (16), Carbide (15) are called out. If you brand "Cobalt HSS" or "Ground HSS" clearly, you differentiate in a sea of unspecified metal.</div>
+    </div>
+  </div>
+
+  <div style="margin-top:24px"></div>
+  <div class="insight-heading">&#9632; RECOMMENDATIONS</div>
+  <div class="insight-body">
+    <div style="margin-bottom:12px"><span class="hazard-text">&#9654;</span> <strong>GBP5-15 工具鋼單支</strong> — 全場只有 Erbauer 和 Titan 在 GBP5-10 有規模（各60、6 SKUs）。高品質 HSS 或 Cobalt 單支可輕鬆切入，定價 GBP7-12。</div>
+    <div style="margin-bottom:12px"><span class="hazard-text">&#9654;</span> <strong>Hex Shank Masonry 組合包</strong> — DeWalt 有55款 Masonry 但集中在 GBP10-30。Erbauer 有56款但便宜。GBP15-25 的「Masonry + SDS 混合包」是缺口。</div>
+    <div style="margin-bottom:12px"><span class="hazard-text">&#9654;</span> <strong>不要碰 GBP0-5</strong> — 238 SKUs 已是紅海。除非你是 Screwfix 自有品牌（Erbauer），否則毛利不夠。</div>
+    <div style="margin-bottom:12px"><span class="hazard-text">&#9654;</span> <strong>Router Bit 是護城河</strong> — Trend 一家佔55/91款，4.66 rating。不是不能打，但要有差異化（比如 Carbid? tip router bits，Trend 沒打的規格）。</div>
+    <div><span class="hazard-text">&#9654;</span> <strong>材質標示是零成本的差異化</strong> — 88% 產品沒標材質。把 HSS / HSS-Co / Carbide / Diamond 寫清楚，在同類產品中立刻突出。</div>
+  </div>
+</div>
+
 <!-- FOOTER -->
 <div class="footer">
   <div><span class="hazard-text">&#9632;</span> SCREWFIX BITS TERMINAL // DATA SOURCE: screwfix.com // 1,019 RECORDS</div>
@@ -378,7 +535,53 @@ const DATA = {
     {name:"Erbauer Metal Drill Bits 3.5mm 5Pk",sku:"90000",price:6.19,rating:4.7,review_count:645,brand:"Erbauer"},
     {name:"Erbauer Metal Drill Bits 8mm 5Pk",sku:"77161",price:17.89,rating:4.7,review_count:645,brand:"Erbauer"},
     {name:"Erbauer Metal Drill Bits 12mm 5Pk",sku:"24565",price:27.39,rating:4.7,review_count:645,brand:"Erbauer"}
-  ]
+  ],
+  // Section 05: Brand Positioning
+  price_band_brand: {
+    brands:["Erbauer","Bosch","DeWalt","Wera","Trend","Milwaukee","Makita","Titan","Einhell","Other"],
+    bands:["0-5","5-10","10-20","20-30","30-50","50-100","100+"],
+    data:{
+      Erbauer:[98,60,71,32,13,2,0],
+      Bosch:[74,39,27,22,19,17,4],
+      DeWalt:[35,47,29,10,11,1,0],
+      Wera:[3,5,34,21,20,20,5],
+      Trend:[0,3,17,26,5,3,0],
+      Milwaukee:[9,6,8,8,6,4,9],
+      Makita:[1,10,7,3,3,4,1],
+      Titan:[11,6,7,1,2,0,0],
+      Einhell:[0,0,13,8,1,2,0],
+      Other:[6,5,14,14,11,9,3]
+    }
+  },
+  // Section 06: Type Distribution
+  type_data: {
+    types:["Drill Bit","Screwdriver Bit","Masonry","Router Bit","Other","Bit Set","Flat Wood","Brad Point","Bit Holder","Socket Bit","Step Drill","Extension"],
+    counts:[318,150,191,91,85,64,39,29,20,19,10,3],
+    avg_prices:[18.63,17.29,16.62,35.40,23.66,42.09,9.85,6.86,12.86,62.93,138.40,8.99],
+    avg_ratings:[4.42,4.50,4.72,4.67,4.30,4.58,4.63,4.60,4.30,4.90,3.30,4.73]
+  },
+  format_data: {
+    formats:["Individual","Set 2-5pc","Set 6-15pc","Set 16-50pc","Set 50+pc"],
+    counts:[527,176,154,125,30],
+    avg_prices:[16.21,20.23,28.49,38.55,32.80],
+    avg_ratings:[4.52,4.42,4.68,4.49,4.53]
+  },
+  // Section 07: Sweet Spot
+  sweetspot: {
+    brands:["Erbauer","Bosch","Trend","Wera","Other","DeWalt","Milwaukee","Einhell"],
+    counts:[45,42,42,41,25,21,14,9],
+    avg_prices:[28.14,33.80,33.45,32.49,31.03,32.52,29.85,26.72],
+    avg_ratings:[4.40,4.81,4.73,4.40,3.98,4.55,4.70,4.25]
+  },
+  // Section 08: Review Dominance
+  review_dominance: {
+    brands:["DeWalt","Erbauer","Bosch","DeWalt","Wera","Trend","Milwaukee","Makita","Erbauer","Erbauer"],
+    products:["Multi-Material 100Pcs","Hex Shank Impact 32Pcs","Metal Drill 5mm 5Pk","SDS-Plus Masonry 10Pcs","Kraftform Bit Set","Craft Pro Set","Step Drill 30Pcs","Masonry Set 7Pcs","Impact Bit Set","Metal Drill 4mm 5Pk"],
+    reviews:[1052,808,645,234,56,44,32,28,24,22],
+    prices:[26.99,9.99,7.39,24.99,29.99,34.99,49.99,12.99,9.99,5.89],
+    brand_totals:[1052,808,845,234,56,44,114,45,808,645],
+    brand_names:["DeWalt","Erbauer","Bosch","DeWalt","Wera","Trend","Milwaukee","Makita","Erbauer","Erbauer"]
+  }
 };
 
 // ===== BRAND COLORS =====
@@ -505,6 +708,169 @@ DATA.top_reviewed.forEach((d,i)=>{
     <td class="highlight mono">${d.review_count.toLocaleString()}</td>
   </tr>`;
 });
+
+// ===== CHART 5: Price Band x Brand Stacked Bar =====
+const pbb = DATA.price_band_brand;
+const pbbTraces = pbb.brands.map(b => ({
+  name:b, type:'bar',
+  x:pbb.bands,
+  y:pbb.data[b],
+  marker:{color:BRAND_COLORS[b]||'#666666',
+    line:{color:'#333',width:1}},
+  text:pbb.data[b].map(v=>v>0?v:''),
+  textposition:'inside',textfont:{color:'#fff',size:9}
+}));
+Plotly.newPlot('chart-price-brand',pbbTraces,{
+  ...LAYOUT,barmode:'stack',
+  yaxis:{...LAYOUT.yaxis,title:{text:'SKU COUNT',font:{color:'#666',size:10}}},
+  xaxis:{...LAYOUT.xaxis,title:{text:'PRICE BAND (£)',font:{color:'#666',size:10}}},
+  legend:{font:{size:9},orientation:'h',y:-0.15},
+  margin:{...LAYOUT.margin,b:60}
+},{displayModeBar:false,responsive:true});
+
+// ===== CHART 6: Brand Focus (horizontal stacked) =====
+const brandOrder = ['Erbauer','Bosch','DeWalt','Wera','Trend','Milwaukee','Makita','Titan','Einhell'];
+const focusTypeMap = {
+  'Drill Bit (General)':{c:318,l:'Drill'},'Screwdriver Bit':{c:150,l:'Screw'},
+  'Masonry Drill':{c:191,l:'Masonry'},'Router Bit':{c:91,l:'Router'},
+  'Bit Holder':{c:20,l:'Holder'},'Flat Wood Bit':{c:39,l:'Flat Wood'},
+  'Brad Point Bit':{c:29,l:'Brad Pt'},'Socket Bit':{c:19,l:'Socket'},
+  'Other':{c:85,l:'Other'}
+};
+const brandFocusData = {
+  Erbauer:{'Drill':97,'Masonry':56,'Screw':37,'Other':86},
+  Bosch:{'Drill':92,'Masonry':61,'Screw':26,'Other':23},
+  DeWalt:{'Masonry':55,'Drill':35,'Screw':25,'Other':18},
+  Wera:{'Screw Set':43,'Screw':19,'Other':46},
+  Trend:{'Router':55,'Other':15},
+  Milwaukee:{'Drill':18,'Screw':9,'Other':23},
+  Makita:{'Drill':12,'Masonry':6,'Screw':5,'Other':6},
+  Titan:{'Drill':9,'Screw':6,'Brad Pt':6,'Other':6}
+};
+const focusTypes = ['Drill','Masonry','Screw','Screw Set','Router','Brad Pt','Other'];
+const focusColors = {'Drill':'#00CED1','Masonry':'#E61919','Screw':'#FFC107','Screw Set':'#DAA520','Router':'#DDA0DD','Brad Pt':'#FF8C00','Other':'#444444'};
+const focusTraces = focusTypes.map(t => ({
+  name:t, type:'bar', orientation:'h',
+  y:brandOrder,
+  x:brandOrder.map(b=>(brandFocusData[b]&&brandFocusData[b][t])||0),
+  marker:{color:focusColors[t]||'#666'},
+  textposition:'inside',textfont:{size:8,color:'#fff'}
+}));
+Plotly.newPlot('chart-brand-focus',focusTraces,{
+  ...LAYOUT,barmode:'stack',
+  xaxis:{...LAYOUT.xaxis,title:{text:'SKU COUNT',font:{color:'#666',size:10}}},
+  yaxis:{...LAYOUT.yaxis,autorange:'reversed'},
+  legend:{font:{size:8},orientation:'h',y:-0.2},
+  margin:{...LAYOUT.margin,b:55,l:80}
+},{displayModeBar:false,responsive:true});
+
+// ===== CHART 7: Type Distribution =====
+const td = DATA.type_data;
+const typeConsolidated = {
+  names:["Drill","Screwdriver","Masonry","Router","Bit Set","Flat Wood","Other"],
+  counts:[318,150,191,91,64,39,57],
+  avg_prices:[18.63,17.29,16.62,35.40,42.09,9.85,28.40],
+  avg_ratings:[4.42,4.50,4.72,4.67,4.58,4.63,4.30]
+};
+const typeBarTrace = {
+  x:typeConsolidated.names, y:typeConsolidated.counts,
+  type:'bar',
+  marker:{color:typeConsolidated.avg_ratings.map(r=>{
+    if(r>=4.65) return '#00CED1';
+    if(r>=4.5) return '#D4A017';
+    return '#E61919';
+  }),line:{color:'#333',width:1}},
+  text:typeConsolidated.counts,
+  textposition:'outside',textfont:{color:'#EAEAEA',size:10}
+};
+const typeAvgTrace = {
+  x:typeConsolidated.names, y:typeConsolidated.avg_prices,
+  type:'scatter', mode:'markers',
+  marker:{color:'#FF69B4',size:12,symbol:'diamond'},
+  yaxis:'y2',
+  text:typeConsolidated.avg_prices.map(p=>'£'+p.toFixed(0)),
+  textposition:'top center',textfont:{color:'#FF69B4',size:9}
+};
+Plotly.newPlot('chart-type-dist',[typeBarTrace,typeAvgTrace],{
+  ...LAYOUT,
+  yaxis:{...LAYOUT.yaxis,title:{text:'SKU COUNT',font:{color:'#666',size:10}}},
+  yaxis2:{overlaying:'y',side:'right',gridcolor:'#1A1A1A',linecolor:'#333',
+    title:{text:'AVG PRICE (£)',font:{color:'#FF69B4',size:10}},
+    tickfont:{color:'#FF69B4',size:10}},
+  legend:{font:{size:9},orientation:'h',y:-0.15},
+  margin:{...LAYOUT.margin,b:55}
+},{displayModeBar:false,responsive:true});
+
+// ===== CHART 8: Set vs Individual =====
+const fd = DATA.format_data;
+Plotly.newPlot('chart-format-dist',[{
+  x:fd.formats, y:fd.counts, type:'bar',name:'SKU Count',
+  marker:{color:'#D4A017',line:{color:'#333',width:1}},
+  text:fd.counts,textposition:'outside',textfont:{color:'#D4A017',size:10}
+},{
+  x:fd.formats, y:fd.avg_prices, type:'scatter',mode:'lines+markers',name:'Avg Price',
+  marker:{color:'#00CED1',size:10},line:{color:'#00CED1',width:2},
+  yaxis:'y2'
+},{
+  x:fd.formats, y:fd.avg_ratings, type:'scatter',mode:'lines+markers',name:'Avg Rating',
+  marker:{color:'#E61919',size:10},line:{color:'#E61919',width:2,dash:'dot'},
+  yaxis:'y3'
+}],{
+  ...LAYOUT,
+  yaxis:{...LAYOUT.yaxis,title:{text:'SKU COUNT',font:{color:'#666',size:10}}},
+  yaxis2:{overlaying:'y',side:'right',gridcolor:'#1A1A1A',
+    title:{text:'AVG PRICE (£)',font:{color:'#00CED1',size:10}},
+    tickfont:{color:'#00CED1',size:9},range:[0,50]},
+  yaxis3:{overlaying:'y',side:'right',anchor:'free',position:0.95,
+    title:{text:'AVG RATING',font:{color:'#E61919',size:10}},
+    tickfont:{color:'#E61919',size:9},range:[4.0,5.0]},
+  legend:{font:{size:9},orientation:'h',y:-0.2},
+  margin:{...LAYOUT.margin,b:55,r:80,l:60}
+},{displayModeBar:false,responsive:true});
+
+// ===== CHART 9: Sweet Spot =====
+const ss = DATA.sweetspot;
+Plotly.newPlot('chart-sweetspot',[{
+  x:ss.brands, y:ss.counts, type:'bar',name:'SKU Count',
+  marker:{color:ss.avg_ratings.map(r=>{
+    if(r>=4.7) return '#00CED1';
+    if(r>=4.55) return '#D4A017';
+    return '#E61919';
+  }),line:{color:'#333',width:1}},
+  text:ss.counts,textposition:'outside',textfont:{color:'#EAEAEA',size:10}
+},{
+  x:ss.brands, y:ss.avg_prices, type:'scatter',mode:'markers+text',name:'Avg Price',
+  marker:{color:'#FF69B4',size:14,symbol:'diamond'},
+  text:ss.avg_prices.map(p=>'£'+p.toFixed(0)),
+  textposition:'top center',textfont:{color:'#FF69B4',size:9},
+  yaxis:'y2'
+}],{
+  ...LAYOUT,
+  yaxis:{...LAYOUT.yaxis,title:{text:'SKU COUNT',font:{color:'#666',size:10}}},
+  yaxis2:{overlaying:'y',side:'right',gridcolor:'#1A1A1A',
+    title:{text:'AVG PRICE (£)',font:{color:'#FF69B4',size:10}},
+    tickfont:{color:'#FF69B4',size:9}},
+  legend:{font:{size:9},orientation:'h',y:-0.2},
+  margin:{...LAYOUT.margin,b:55,r:60},
+  title:{text:'£20-50 PRICE BAND',font:{color:'#666',size:10},x:0.01,xanchor:'left'}
+},{displayModeBar:false,responsive:true});
+
+// ===== CHART 10: Review Dominance =====
+const rd = DATA.review_dominance;
+Plotly.newPlot('chart-review-dom',[{
+  x:rd.reviews, y:rd.products.map((p,i)=>p.length>20?p.slice(0,18)+'...':p),
+  type:'bar', orientation:'h',
+  marker:{color:rd.brands.map(b=>BRAND_COLORS[b]||'#666666'),
+    line:{color:'#333',width:1}},
+  text:rd.reviews.map(r=>r.toLocaleString()),
+  textposition:'outside',textfont:{color:'#EAEAEA',size:10}
+}],{
+  ...LAYOUT,
+  xaxis:{...LAYOUT.xaxis,title:{text:'REVIEW COUNT',font:{color:'#666',size:10}}},
+  yaxis:{...LAYOUT.yaxis,tickfont:{size:9},autorange:'reversed'},
+  margin:{...LAYOUT.margin,l:160},
+  height:450
+},{displayModeBar:false,responsive:true});
 
 // ===== TIMESTAMP =====
 document.getElementById('timestamp').textContent = new Date().toISOString().slice(0,19).replace('T',' ') + ' UTC';
